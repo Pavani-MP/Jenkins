@@ -6,14 +6,13 @@ pipeline {
         stage('CreateDockerContainer') 
         { 
             steps {
-              script{
-		      sh ("""#!/bin/bash
-                  "whoami"
-		  "docker --version"
+              
+                   sh "whoami"
+		  sh "docker --version"
 		 
-		 "docker run -itd -p 90:80 nginx" 
-		 """)
-           }
+		 sh "docker run -itd -p 90:80 nginx" 
+		
+   
             }
 			  }
         stage('ViewRunningContainers') 

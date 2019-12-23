@@ -24,7 +24,7 @@ pipeline {
         { 
             steps {
                 //
-			sh "docker inspect"
+			sh "docker container inspect nginx"
             }
         }
     }

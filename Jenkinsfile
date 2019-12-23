@@ -14,7 +14,7 @@ pipeline {
         stage('ViewRunningContainers') { 
             steps {
                 //
-                        sh "docker ps -a”
+                        sh "docker ps -a"
                       }
         }
         }

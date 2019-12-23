@@ -10,7 +10,7 @@ pipeline {
 		      sh ("""#!/bin/bash
                   "whoami"
 		  "docker --version"
-		 docker rm -f $(docker ps -aq)
+		 
 		 "docker run -itd -p 90:80 nginx" 
 		 """)
            }

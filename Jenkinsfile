@@ -9,10 +9,8 @@ pipeline {
               
                    sh "whoami"
 		  sh "docker --version"
-		 
+		  sh "docker rm -f"
 		 sh "docker run -itd -p 90:80 nginx" 
-		
-   
             }
 			  }
         stage('ViewRunningContainers') 

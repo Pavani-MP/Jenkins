@@ -8,9 +8,7 @@ pipeline {
                //
                   sh "whoami"
 		 sh "docker —version"
-		sh "docker run -itd -p 90:80 nginx"
-                    
-              
+		sh "docker run -itd -p 90:80 nginx"     
             }
             }
         stage('ViewRunningContainers') { pipeline {

@@ -3,27 +3,27 @@ pipeline {
  label ‘amazon-linux-slave’
 }
     stages {
-        stage(‘CreateDockerContainer’) { 
+        stage('CreateDockerContainer') { 
             steps {
                //
-                  sh” whoami"
-		 sh “docker —version”
-		sh “docker run -itd -p 90:80 nginx”
+                  sh "whoami"
+		 sh "docker —version"
+		sh "docker run -itd -p 90:80 nginx"
                     
               
             }
             }
-        stage(‘ViewRunningContainers’) { 
+        stage('ViewRunningContainers') { 
             steps {
                 //
-                        sh ”docker ps -a”
+                        sh "docker ps -a"
                       }
         }
         }
-        stage(‘Verify') { 
+        stage('Verify') { 
             steps {
                 //
-			sh “docker inspect”
+			sh "docker inspect"
             
             }
         }
